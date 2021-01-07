@@ -1,0 +1,1296 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\Saad\Documents\Economics uni\Second year\QM2\Empirical project\LOGFILE.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}29 Feb 2020, 05:43:04
+{txt}
+{com}. 
+. ///*****QUESTION IV******///
+> 
+. //Results for All stores, Burger king, KFC, Roy Rogers, Wendy's
+. drop if prpblck == .
+{txt}(1 observation deleted)
+
+{com}. 
+. tab chain // total chains= 409
+
+{txt}BK = 1, KFC {c |}
+   = 2, Roy {c |}
+Rogers = 3, {c |}
+Wendy's = 4 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}        171       41.81       41.81
+{txt}          2 {c |}{res}         80       19.56       61.37
+{txt}          3 {c |}{res}         98       23.96       85.33
+{txt}          4 {c |}{res}         60       14.67      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        409      100.00
+{txt}
+{com}. tab NJ chain // total New Jersey chains= 331
+
+           {txt}{c |} BK = 1, KFC = 2, Roy Rogers = 3, Wendy's =
+=1 for New {c |}                      4
+    Jersey {c |}         1          2          3          4 {c |}     Total
+{hline 11}{c +}{hline 44}{c +}{hline 10}
+         0 {c |}{res}        35         12         16         15 {txt}{c |}{res}        78 
+{txt}         1 {c |}{res}       136         68         82         45 {txt}{c |}{res}       331 
+{txt}{hline 11}{c +}{hline 44}{c +}{hline 10}
+     Total {c |}{res}       171         80         98         60 {txt}{c |}{res}       409 
+
+{txt}
+{com}. //Divide NJ chain by chain to obtain percentages for All stores, Burger king, KFC, Roy Rogers, Wendy's
+. 
+. tab chain if prpblck >.2 // >20% black for All stores, Burger king, KFC, Roy Rogers, Wendy's 
+
+{txt}BK = 1, KFC {c |}
+   = 2, Roy {c |}
+Rogers = 3, {c |}
+Wendy's = 4 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}         22       33.33       33.33
+{txt}          2 {c |}{res}         23       34.85       68.18
+{txt}          3 {c |}{res}         14       21.21       89.39
+{txt}          4 {c |}{res}          7       10.61      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         66      100.00
+{txt}
+{com}. tab chain if prppov >.2 // >20% poverty for All stores, Burger king, KFC, Roy Rogers, Wendy's 
+
+{txt}BK = 1, KFC {c |}
+   = 2, Roy {c |}
+Rogers = 3, {c |}
+Wendy's = 4 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          9       32.14       32.14
+{txt}          2 {c |}{res}         10       35.71       67.86
+{txt}          3 {c |}{res}          5       17.86       85.71
+{txt}          4 {c |}{res}          4       14.29      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         28      100.00
+{txt}
+{com}. tab chain if prpblck >.1 // >10% black for All stores, Burger king, KFC, Roy Rogers, Wendy's 
+
+{txt}BK = 1, KFC {c |}
+   = 2, Roy {c |}
+Rogers = 3, {c |}
+Wendy's = 4 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}         41       33.61       33.61
+{txt}          2 {c |}{res}         37       30.33       63.93
+{txt}          3 {c |}{res}         25       20.49       84.43
+{txt}          4 {c |}{res}         19       15.57      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        122      100.00
+{txt}
+{com}. tab chain if prppov >.1 // >10% poverty for All stores, Burger king, KFC, Roy Rogers, Wendy's 
+
+{txt}BK = 1, KFC {c |}
+   = 2, Roy {c |}
+Rogers = 3, {c |}
+Wendy's = 4 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}         27       33.75       33.75
+{txt}          2 {c |}{res}         24       30.00       63.75
+{txt}          3 {c |}{res}         12       15.00       78.75
+{txt}          4 {c |}{res}         17       21.25      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         80      100.00
+{txt}
+{com}. 
+. //Values for column All NJ stores
+. tab NJ chain if prpblck >.2 
+
+           {txt}{c |} BK = 1, KFC = 2, Roy Rogers = 3, Wendy's =
+=1 for New {c |}                      4
+    Jersey {c |}         1          2          3          4 {c |}     Total
+{hline 11}{c +}{hline 44}{c +}{hline 10}
+         1 {c |}{res}        22         23         14          7 {txt}{c |}{res}        66 
+{txt}{hline 11}{c +}{hline 44}{c +}{hline 10}
+     Total {c |}{res}        22         23         14          7 {txt}{c |}{res}        66 
+
+{txt}
+{com}. tab NJ chain if prppov >.2 
+
+           {txt}{c |} BK = 1, KFC = 2, Roy Rogers = 3, Wendy's =
+=1 for New {c |}                      4
+    Jersey {c |}         1          2          3          4 {c |}     Total
+{hline 11}{c +}{hline 44}{c +}{hline 10}
+         0 {c |}{res}         0          0          0          2 {txt}{c |}{res}         2 
+{txt}         1 {c |}{res}         9         10          5          2 {txt}{c |}{res}        26 
+{txt}{hline 11}{c +}{hline 44}{c +}{hline 10}
+     Total {c |}{res}         9         10          5          4 {txt}{c |}{res}        28 
+
+{txt}
+{com}. tab NJ chain if prpblck >.1 
+
+           {txt}{c |} BK = 1, KFC = 2, Roy Rogers = 3, Wendy's =
+=1 for New {c |}                      4
+    Jersey {c |}         1          2          3          4 {c |}     Total
+{hline 11}{c +}{hline 44}{c +}{hline 10}
+         0 {c |}{res}         3          1          2          3 {txt}{c |}{res}         9 
+{txt}         1 {c |}{res}        38         36         23         16 {txt}{c |}{res}       113 
+{txt}{hline 11}{c +}{hline 44}{c +}{hline 10}
+     Total {c |}{res}        41         37         25         19 {txt}{c |}{res}       122 
+
+{txt}
+{com}. tab NJ chain if prppov >.1 
+
+           {txt}{c |} BK = 1, KFC = 2, Roy Rogers = 3, Wendy's =
+=1 for New {c |}                      4
+    Jersey {c |}         1          2          3          4 {c |}     Total
+{hline 11}{c +}{hline 44}{c +}{hline 10}
+         0 {c |}{res}         4          1          0          5 {txt}{c |}{res}        10 
+{txt}         1 {c |}{res}        23         23         12         12 {txt}{c |}{res}        70 
+{txt}{hline 11}{c +}{hline 44}{c +}{hline 10}
+     Total {c |}{res}        27         24         12         17 {txt}{c |}{res}        80 
+
+{txt}
+{com}. 
+. //Values for T test KFC vs others
+. ttest KFC, by(NJ) //t =  -1.0322
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}     78{col 22} .1538462{col 34} .0411171{col 46} .3631365{col 58} .0719715{col 70} .2357208
+       {txt}1 {c |}{res}{col 12}    331{col 22} .2054381{col 34} .0222406{col 46} .4046331{col 58} .1616867{col 70} .2491894
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    409{col 22}  .195599{col 34} .0196377{col 46} .3971469{col 58} .1569954{col 70} .2342026
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-.0515919{col 34} .0499824{col 58}-.1498477{col 70} .0466639
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -1.0322
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     407
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.1513         {txt}Pr(|T| > |t|) = {res}0.3026          {txt}Pr(T > t) = {res}0.8487
+{txt}
+{com}. 
+. gen prpblck20 = prpblck >.2
+{txt}
+{com}. gen prppov20 = prppov >.2
+{txt}
+{com}. gen prpblck10 = prpblck >.1
+{txt}
+{com}. gen prppov10 = prppov >.1
+{txt}
+{com}. 
+. 
+. ttest KFC, by(prpblck20) // t =  -3.4607
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    343{col 22} .1661808{col 34} .0201286{col 46} .3727866{col 58} .1265893{col 70} .2057722
+       {txt}1 {c |}{res}{col 12}     66{col 22} .3484848{col 34} .0591014{col 46} .4801418{col 58} .2304513{col 70} .4665184
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    409{col 22}  .195599{col 34} .0196377{col 46} .3971469{col 58} .1569954{col 70} .2342026
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-.1823041{col 34}  .052678{col 58} -.285859{col 70}-.0787492
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -3.4607
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     407
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0003         {txt}Pr(|T| > |t|) = {res}0.0006          {txt}Pr(T > t) = {res}0.9997
+{txt}
+{com}. ttest KFC, by(prppov20) //  t =  -2.2410
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    381{col 22}  .183727{col 34} .0198661{col 46} .3877706{col 58} .1446658{col 70} .2227883
+       {txt}1 {c |}{res}{col 12}     28{col 22} .3571429{col 34} .0922139{col 46}   .48795{col 58} .1679356{col 70} .5463501
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    409{col 22}  .195599{col 34} .0196377{col 46} .3971469{col 58} .1569954{col 70} .2342026
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-.1734158{col 34} .0773822{col 58}-.3255345{col 70}-.0212971
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -2.2410
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     407
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0128         {txt}Pr(|T| > |t|) = {res}0.0256          {txt}Pr(T > t) = {res}0.9872
+{txt}
+{com}. ttest KFC, by(prpblck10) //  t =  -3.6280
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    287{col 22} .1498258{col 34}  .021104{col 46}  .357524{col 58}  .108287{col 70} .1913646
+       {txt}1 {c |}{res}{col 12}    122{col 22} .3032787{col 34} .0417886{col 46} .4615702{col 58} .2205471{col 70} .3860102
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    409{col 22}  .195599{col 34} .0196377{col 46} .3971469{col 58} .1569954{col 70} .2342026
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-.1534529{col 34} .0422974{col 58}-.2366015{col 70}-.0703043
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -3.6280
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     407
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0002         {txt}Pr(|T| > |t|) = {res}0.0003          {txt}Pr(T > t) = {res}0.9998
+{txt}
+{com}. ttest KFC, by(prppov10) // t =  -2.6407
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    329{col 22} .1702128{col 34} .0207512{col 46} .3763921{col 58} .1293906{col 70} .2110349
+       {txt}1 {c |}{res}{col 12}     80{col 22}       .3{col 34}  .051558{col 46} .4611488{col 58} .1973764{col 70} .4026236
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    409{col 22}  .195599{col 34} .0196377{col 46} .3971469{col 58} .1569954{col 70} .2342026
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-.1297872{col 34} .0491489{col 58}-.2264046{col 70}-.0331698
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -2.6407
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     407
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0043         {txt}Pr(|T| > |t|) = {res}0.0086          {txt}Pr(T > t) = {res}0.9957
+{txt}
+{com}. 
+. //Values for Primary sample
+. preserve 
+{txt}
+{com}. //dropping values according to Graddy's report
+. drop if crmrte ==.
+{txt}(1 observation deleted)
+
+{com}. drop if psoda ==.
+{txt}(8 observations deleted)
+
+{com}. drop if psoda2 ==.
+{txt}(22 observations deleted)
+
+{com}. drop if pfries ==.
+{txt}(10 observations deleted)
+
+{com}. drop if pfries2 ==.
+{txt}(9 observations deleted)
+
+{com}. drop if pentree ==.
+{txt}(4 observations deleted)
+
+{com}. drop if pentree2 ==.
+{txt}(1 observation deleted)
+
+{com}. drop if wagest ==.
+{txt}(17 observations deleted)
+
+{com}. drop if wagest2 ==.
+{txt}(5 observations deleted)
+
+{com}. drop if emp ==.
+{txt}(4 observations deleted)
+
+{com}. drop if emp2 ==.
+{txt}(6 observations deleted)
+
+{com}. 
+. tab chain // total chains = 322
+
+{txt}BK = 1, KFC {c |}
+   = 2, Roy {c |}
+Rogers = 3, {c |}
+Wendy's = 4 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}        133       41.30       41.30
+{txt}          2 {c |}{res}         73       22.67       63.98
+{txt}          3 {c |}{res}         74       22.98       86.96
+{txt}          4 {c |}{res}         42       13.04      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        322      100.00
+{txt}
+{com}. tab NJ chain // NJ chains = 261
+
+           {txt}{c |} BK = 1, KFC = 2, Roy Rogers = 3, Wendy's =
+=1 for New {c |}                      4
+    Jersey {c |}         1          2          3          4 {c |}     Total
+{hline 11}{c +}{hline 44}{c +}{hline 10}
+         0 {c |}{res}        27         10         14         10 {txt}{c |}{res}        61 
+{txt}         1 {c |}{res}       106         63         60         32 {txt}{c |}{res}       261 
+{txt}{hline 11}{c +}{hline 44}{c +}{hline 10}
+     Total {c |}{res}       133         73         74         42 {txt}{c |}{res}       322 
+
+{txt}
+{com}. 
+. // For Primary sample values, do "(total value/322)*100"
+. tab chain if prpblck >.2 // total value = 53
+
+{txt}BK = 1, KFC {c |}
+   = 2, Roy {c |}
+Rogers = 3, {c |}
+Wendy's = 4 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}         15       28.30       28.30
+{txt}          2 {c |}{res}         21       39.62       67.92
+{txt}          3 {c |}{res}         12       22.64       90.57
+{txt}          4 {c |}{res}          5        9.43      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         53      100.00
+{txt}
+{com}. tab chain if prppov >.2 // total value = 25 
+
+{txt}BK = 1, KFC {c |}
+   = 2, Roy {c |}
+Rogers = 3, {c |}
+Wendy's = 4 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          7       28.00       28.00
+{txt}          2 {c |}{res}         10       40.00       68.00
+{txt}          3 {c |}{res}          5       20.00       88.00
+{txt}          4 {c |}{res}          3       12.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         25      100.00
+{txt}
+{com}. tab chain if prpblck >.1 // total value = 103 
+
+{txt}BK = 1, KFC {c |}
+   = 2, Roy {c |}
+Rogers = 3, {c |}
+Wendy's = 4 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}         33       32.04       32.04
+{txt}          2 {c |}{res}         35       33.98       66.02
+{txt}          3 {c |}{res}         22       21.36       87.38
+{txt}          4 {c |}{res}         13       12.62      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        103      100.00
+{txt}
+{com}. tab chain if prppov >.1 // total value = 69
+
+{txt}BK = 1, KFC {c |}
+   = 2, Roy {c |}
+Rogers = 3, {c |}
+Wendy's = 4 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}         23       33.33       33.33
+{txt}          2 {c |}{res}         23       33.33       66.67
+{txt}          3 {c |}{res}         11       15.94       82.61
+{txt}          4 {c |}{res}         12       17.39      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         69      100.00
+{txt}
+{com}. 
+. restore
+{txt}
+{com}. 
+. 
+. 
+. 
+. 
+. ///*****QUESTION VI******///
+> 
+. // Generating variables according to Graddy's table
+. 
+. gen ameal = (psoda + pfries + pentree + psoda2 + pfries2 + pentree2)/2
+{txt}(54 missing values generated)
+
+{com}. gen lameal = log(ameal)
+{txt}(54 missing values generated)
+
+{com}. gen awagest = (wagest + wagest2)/2
+{txt}(40 missing values generated)
+
+{com}. gen lawagest = log(awagest)
+{txt}(40 missing values generated)
+
+{com}. gen aemp = (emp + emp2)/2
+{txt}(19 missing values generated)
+
+{com}. gen laemp = log(aemp)
+{txt}(19 missing values generated)
+
+{com}. gen storec = nstores<=3
+{txt}
+{com}. 
+. preserve
+{txt}
+{com}. 
+. drop if crmrte ==.
+{txt}(1 observation deleted)
+
+{com}. drop if psoda ==.
+{txt}(8 observations deleted)
+
+{com}. drop if psoda2 ==.
+{txt}(22 observations deleted)
+
+{com}. drop if pfries ==.
+{txt}(10 observations deleted)
+
+{com}. drop if pfries2 ==.
+{txt}(9 observations deleted)
+
+{com}. drop if pentree ==.
+{txt}(4 observations deleted)
+
+{com}. drop if pentree2 ==.
+{txt}(1 observation deleted)
+
+{com}. drop if wagest ==.
+{txt}(17 observations deleted)
+
+{com}. drop if wagest2 ==.
+{txt}(5 observations deleted)
+
+{com}. drop if emp ==.
+{txt}(4 observations deleted)
+
+{com}. drop if emp2 ==.
+{txt}(6 observations deleted)
+
+{com}. 
+. // Values for column 1,2 and 3
+. 
+. reg lameal prpblck lincome prppov ldensity lawagest laemp crmrte lhseval compown prpncar NJ storec i.chain, robust
+
+{txt}Linear regression                               Number of obs     = {res}       322
+                                                {txt}F(15, 306)        =  {res}   146.63
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.8351
+                                                {txt}Root MSE          =    {res} .07339
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}      lameal{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}prpblck {c |}{col 14}{res}{space 2} .1079779{col 26}{space 2} .0374768{col 37}{space 1}    2.88{col 46}{space 3}0.004{col 54}{space 4} .0342331{col 67}{space 3} .1817227
+{txt}{space 5}lincome {c |}{col 14}{res}{space 2}-.1572286{col 26}{space 2} .0400679{col 37}{space 1}   -3.92{col 46}{space 3}0.000{col 54}{space 4}-.2360721{col 67}{space 3}-.0783852
+{txt}{space 6}prppov {c |}{col 14}{res}{space 2}-.7281494{col 26}{space 2} .2337233{col 37}{space 1}   -3.12{col 46}{space 3}0.002{col 54}{space 4}-1.188058{col 67}{space 3}-.2682411
+{txt}{space 4}ldensity {c |}{col 14}{res}{space 2}  .007565{col 26}{space 2} .0054386{col 37}{space 1}    1.39{col 46}{space 3}0.165{col 54}{space 4}-.0031367{col 67}{space 3} .0182667
+{txt}{space 4}lawagest {c |}{col 14}{res}{space 2} .0299345{col 26}{space 2} .1036817{col 37}{space 1}    0.29{col 46}{space 3}0.773{col 54}{space 4}-.1740848{col 67}{space 3} .2339537
+{txt}{space 7}laemp {c |}{col 14}{res}{space 2}-.0322962{col 26}{space 2} .0154388{col 37}{space 1}   -2.09{col 46}{space 3}0.037{col 54}{space 4}-.0626758{col 67}{space 3}-.0019167
+{txt}{space 6}crmrte {c |}{col 14}{res}{space 2} .2310649{col 26}{space 2} .1282143{col 37}{space 1}    1.80{col 46}{space 3}0.073{col 54}{space 4}-.0212284{col 67}{space 3} .4833582
+{txt}{space 5}lhseval {c |}{col 14}{res}{space 2} .1212225{col 26}{space 2} .0236557{col 37}{space 1}    5.12{col 46}{space 3}0.000{col 54}{space 4} .0746742{col 67}{space 3} .1677709
+{txt}{space 5}compown {c |}{col 14}{res}{space 2}-.0276587{col 26}{space 2} .0104231{col 37}{space 1}   -2.65{col 46}{space 3}0.008{col 54}{space 4}-.0481688{col 67}{space 3}-.0071487
+{txt}{space 5}prpncar {c |}{col 14}{res}{space 2} .0594739{col 26}{space 2} .1148319{col 37}{space 1}    0.52{col 46}{space 3}0.605{col 54}{space 4}-.1664862{col 67}{space 3} .2854341
+{txt}{space 10}NJ {c |}{col 14}{res}{space 2} .0495371{col 26}{space 2} .0104896{col 37}{space 1}    4.72{col 46}{space 3}0.000{col 54}{space 4} .0288962{col 67}{space 3}  .070178
+{txt}{space 6}storec {c |}{col 14}{res}{space 2} .0239898{col 26}{space 2} .0099205{col 37}{space 1}    2.42{col 46}{space 3}0.016{col 54}{space 4} .0044689{col 67}{space 3} .0435108
+{txt}{space 12} {c |}
+{space 7}chain {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .3882283{col 26}{space 2} .0149089{col 37}{space 1}   26.04{col 46}{space 3}0.000{col 54}{space 4} .3588914{col 67}{space 3} .4175651
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}  .088652{col 26}{space 2} .0123397{col 37}{space 1}    7.18{col 46}{space 3}0.000{col 54}{space 4} .0643705{col 67}{space 3} .1129334
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .0798922{col 26}{space 2} .0176661{col 37}{space 1}    4.52{col 46}{space 3}0.000{col 54}{space 4} .0451298{col 67}{space 3} .1146546
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} 1.280523{col 26}{space 2} .2891434{col 37}{space 1}    4.43{col 46}{space 3}0.000{col 54}{space 4} .7115615{col 67}{space 3} 1.849484
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg lameal prpblck lincome prppov ldensity lawagest laemp crmrte lhseval compown prpncar storec i.county i.chain, robust
+
+{txt}Linear regression                               Number of obs     = {res}       322
+                                                {txt}{help j_robustsingular:F(39, 279) }       =  {res}        .
+                                                {txt}Prob > F          = {res}         .
+                                                {txt}R-squared         = {res}    0.8628
+                                                {txt}Root MSE          =    {res} .07011
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}      lameal{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}prpblck {c |}{col 14}{res}{space 2} .0954547{col 26}{space 2} .0421648{col 37}{space 1}    2.26{col 46}{space 3}0.024{col 54}{space 4} .0124532{col 67}{space 3} .1784562
+{txt}{space 5}lincome {c |}{col 14}{res}{space 2} -.072325{col 26}{space 2} .0507414{col 37}{space 1}   -1.43{col 46}{space 3}0.155{col 54}{space 4}-.1722097{col 67}{space 3} .0275596
+{txt}{space 6}prppov {c |}{col 14}{res}{space 2}-.4687878{col 26}{space 2} .2801735{col 37}{space 1}   -1.67{col 46}{space 3}0.095{col 54}{space 4} -1.02031{col 67}{space 3} .0827346
+{txt}{space 4}ldensity {c |}{col 14}{res}{space 2} .0022783{col 26}{space 2} .0059258{col 37}{space 1}    0.38{col 46}{space 3}0.701{col 54}{space 4}-.0093866{col 67}{space 3} .0139432
+{txt}{space 4}lawagest {c |}{col 14}{res}{space 2} .0534256{col 26}{space 2} .1161626{col 37}{space 1}    0.46{col 46}{space 3}0.646{col 54}{space 4}-.1752408{col 67}{space 3}  .282092
+{txt}{space 7}laemp {c |}{col 14}{res}{space 2}-.0430796{col 26}{space 2} .0173531{col 37}{space 1}   -2.48{col 46}{space 3}0.014{col 54}{space 4}-.0772392{col 67}{space 3}-.0089199
+{txt}{space 6}crmrte {c |}{col 14}{res}{space 2} .1999766{col 26}{space 2} .1382574{col 37}{space 1}    1.45{col 46}{space 3}0.149{col 54}{space 4}-.0721834{col 67}{space 3} .4721366
+{txt}{space 5}lhseval {c |}{col 14}{res}{space 2} .0257476{col 26}{space 2} .0367208{col 37}{space 1}    0.70{col 46}{space 3}0.484{col 54}{space 4}-.0465374{col 67}{space 3} .0980325
+{txt}{space 5}compown {c |}{col 14}{res}{space 2} -.019999{col 26}{space 2} .0108063{col 37}{space 1}   -1.85{col 46}{space 3}0.065{col 54}{space 4}-.0412712{col 67}{space 3} .0012731
+{txt}{space 5}prpncar {c |}{col 14}{res}{space 2}-.0630355{col 26}{space 2} .1498945{col 37}{space 1}   -0.42{col 46}{space 3}0.674{col 54}{space 4}-.3581034{col 67}{space 3} .2320323
+{txt}{space 6}storec {c |}{col 14}{res}{space 2} .0208499{col 26}{space 2} .0105838{col 37}{space 1}    1.97{col 46}{space 3}0.050{col 54}{space 4} .0000156{col 67}{space 3} .0416842
+{txt}{space 12} {c |}
+{space 6}county {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .0683802{col 26}{space 2} .0326496{col 37}{space 1}    2.09{col 46}{space 3}0.037{col 54}{space 4} .0041094{col 67}{space 3} .1326511
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.0397994{col 26}{space 2} .0297775{col 37}{space 1}   -1.34{col 46}{space 3}0.182{col 54}{space 4}-.0984166{col 67}{space 3} .0188177
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.0438057{col 26}{space 2} .0333016{col 37}{space 1}   -1.32{col 46}{space 3}0.189{col 54}{space 4}  -.10936{col 67}{space 3} .0217485
+{txt}{space 10}5  {c |}{col 14}{res}{space 2}-.0661033{col 26}{space 2} .0291852{col 37}{space 1}   -2.26{col 46}{space 3}0.024{col 54}{space 4}-.1235546{col 67}{space 3}-.0086521
+{txt}{space 10}6  {c |}{col 14}{res}{space 2} -.048845{col 26}{space 2}  .031259{col 37}{space 1}   -1.56{col 46}{space 3}0.119{col 54}{space 4}-.1103785{col 67}{space 3} .0126885
+{txt}{space 10}7  {c |}{col 14}{res}{space 2}-.0021076{col 26}{space 2}  .039297{col 37}{space 1}   -0.05{col 46}{space 3}0.957{col 54}{space 4}-.0794639{col 67}{space 3} .0752488
+{txt}{space 10}8  {c |}{col 14}{res}{space 2}-.1065649{col 26}{space 2} .0318685{col 37}{space 1}   -3.34{col 46}{space 3}0.001{col 54}{space 4}-.1692981{col 67}{space 3}-.0438317
+{txt}{space 10}9  {c |}{col 14}{res}{space 2} -.060232{col 26}{space 2} .0433952{col 37}{space 1}   -1.39{col 46}{space 3}0.166{col 54}{space 4}-.1456557{col 67}{space 3} .0251916
+{txt}{space 9}10  {c |}{col 14}{res}{space 2} .0338094{col 26}{space 2} .0327127{col 37}{space 1}    1.03{col 46}{space 3}0.302{col 54}{space 4}-.0305857{col 67}{space 3} .0982044
+{txt}{space 9}11  {c |}{col 14}{res}{space 2}-.0440274{col 26}{space 2}  .035294{col 37}{space 1}   -1.25{col 46}{space 3}0.213{col 54}{space 4}-.1135038{col 67}{space 3}  .025449
+{txt}{space 9}12  {c |}{col 14}{res}{space 2} .0429242{col 26}{space 2}   .03673{col 37}{space 1}    1.17{col 46}{space 3}0.244{col 54}{space 4}-.0293789{col 67}{space 3} .1152274
+{txt}{space 9}13  {c |}{col 14}{res}{space 2} .0311161{col 26}{space 2} .0306351{col 37}{space 1}    1.02{col 46}{space 3}0.311{col 54}{space 4}-.0291892{col 67}{space 3} .0914214
+{txt}{space 9}14  {c |}{col 14}{res}{space 2}-.0283528{col 26}{space 2} .0748154{col 37}{space 1}   -0.38{col 46}{space 3}0.705{col 54}{space 4}-.1756271{col 67}{space 3} .1189216
+{txt}{space 9}15  {c |}{col 14}{res}{space 2}-.0605662{col 26}{space 2} .0386861{col 37}{space 1}   -1.57{col 46}{space 3}0.119{col 54}{space 4}  -.13672{col 67}{space 3} .0155876
+{txt}{space 9}16  {c |}{col 14}{res}{space 2}-.0632961{col 26}{space 2}   .04952{col 37}{space 1}   -1.28{col 46}{space 3}0.202{col 54}{space 4}-.1607763{col 67}{space 3} .0341841
+{txt}{space 9}17  {c |}{col 14}{res}{space 2} .0367234{col 26}{space 2} .0374047{col 37}{space 1}    0.98{col 46}{space 3}0.327{col 54}{space 4}-.0369079{col 67}{space 3} .1103547
+{txt}{space 9}18  {c |}{col 14}{res}{space 2} .0393041{col 26}{space 2} .0344035{col 37}{space 1}    1.14{col 46}{space 3}0.254{col 54}{space 4}-.0284193{col 67}{space 3} .1070274
+{txt}{space 9}19  {c |}{col 14}{res}{space 2} .0444702{col 26}{space 2} .0303208{col 37}{space 1}    1.47{col 46}{space 3}0.144{col 54}{space 4}-.0152164{col 67}{space 3} .1041568
+{txt}{space 9}20  {c |}{col 14}{res}{space 2}-.0551255{col 26}{space 2} .0276285{col 37}{space 1}   -2.00{col 46}{space 3}0.047{col 54}{space 4}-.1095123{col 67}{space 3}-.0007388
+{txt}{space 9}21  {c |}{col 14}{res}{space 2}  -.00475{col 26}{space 2} .0305303{col 37}{space 1}   -0.16{col 46}{space 3}0.876{col 54}{space 4} -.064849{col 67}{space 3} .0553489
+{txt}{space 9}22  {c |}{col 14}{res}{space 2}-.1120344{col 26}{space 2} .0312299{col 37}{space 1}   -3.59{col 46}{space 3}0.000{col 54}{space 4}-.1735105{col 67}{space 3}-.0505582
+{txt}{space 9}23  {c |}{col 14}{res}{space 2}  .019745{col 26}{space 2} .0295396{col 37}{space 1}    0.67{col 46}{space 3}0.504{col 54}{space 4}-.0384038{col 67}{space 3} .0778938
+{txt}{space 9}24  {c |}{col 14}{res}{space 2} .0492227{col 26}{space 2} .0350046{col 37}{space 1}    1.41{col 46}{space 3}0.161{col 54}{space 4} -.019684{col 67}{space 3} .1181295
+{txt}{space 9}25  {c |}{col 14}{res}{space 2}-.0430253{col 26}{space 2}  .039787{col 37}{space 1}   -1.08{col 46}{space 3}0.280{col 54}{space 4}-.1213461{col 67}{space 3} .0352955
+{txt}{space 9}26  {c |}{col 14}{res}{space 2}-.0153208{col 26}{space 2} .0280234{col 37}{space 1}   -0.55{col 46}{space 3}0.585{col 54}{space 4}-.0704849{col 67}{space 3} .0398433
+{txt}{space 9}27  {c |}{col 14}{res}{space 2} .0664527{col 26}{space 2} .0280553{col 37}{space 1}    2.37{col 46}{space 3}0.019{col 54}{space 4} .0112258{col 67}{space 3} .1216796
+{txt}{space 9}28  {c |}{col 14}{res}{space 2}  .073017{col 26}{space 2} .0423821{col 37}{space 1}    1.72{col 46}{space 3}0.086{col 54}{space 4}-.0104124{col 67}{space 3} .1564464
+{txt}{space 9}29  {c |}{col 14}{res}{space 2}-.0512427{col 26}{space 2} .0296127{col 37}{space 1}   -1.73{col 46}{space 3}0.085{col 54}{space 4}-.1095353{col 67}{space 3} .0070499
+{txt}{space 12} {c |}
+{space 7}chain {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .3771348{col 26}{space 2} .0157927{col 37}{space 1}   23.88{col 46}{space 3}0.000{col 54}{space 4} .3460467{col 67}{space 3} .4082229
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .0801313{col 26}{space 2} .0119462{col 37}{space 1}    6.71{col 46}{space 3}0.000{col 54}{space 4} .0566152{col 67}{space 3} .1036475
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}  .072295{col 26}{space 2} .0177224{col 37}{space 1}    4.08{col 46}{space 3}0.000{col 54}{space 4} .0374083{col 67}{space 3} .1071816
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} 1.578101{col 26}{space 2}   .35942{col 37}{space 1}    4.39{col 46}{space 3}0.000{col 54}{space 4} .8705814{col 67}{space 3}  2.28562
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg lameal prpblck lincome prppov ldensity crmrte lhseval prpncar NJ i.chain, robust
+
+{txt}Linear regression                               Number of obs     = {res}       322
+                                                {txt}F(11, 310)        =  {res}   191.08
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.8254
+                                                {txt}Root MSE          =    {res} .07503
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}      lameal{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}prpblck {c |}{col 14}{res}{space 2} .0757692{col 26}{space 2} .0386185{col 37}{space 1}    1.96{col 46}{space 3}0.051{col 54}{space 4}-.0002183{col 67}{space 3} .1517566
+{txt}{space 5}lincome {c |}{col 14}{res}{space 2}-.1459815{col 26}{space 2} .0397801{col 37}{space 1}   -3.67{col 46}{space 3}0.000{col 54}{space 4}-.2242546{col 67}{space 3}-.0677084
+{txt}{space 6}prppov {c |}{col 14}{res}{space 2}-.6122363{col 26}{space 2} .2371189{col 37}{space 1}   -2.58{col 46}{space 3}0.010{col 54}{space 4}-1.078802{col 67}{space 3}-.1456703
+{txt}{space 4}ldensity {c |}{col 14}{res}{space 2}  .003883{col 26}{space 2}  .005441{col 37}{space 1}    0.71{col 46}{space 3}0.476{col 54}{space 4}-.0068229{col 67}{space 3} .0145889
+{txt}{space 6}crmrte {c |}{col 14}{res}{space 2} .1684353{col 26}{space 2} .1308141{col 37}{space 1}    1.29{col 46}{space 3}0.199{col 54}{space 4}-.0889605{col 67}{space 3} .4258311
+{txt}{space 5}lhseval {c |}{col 14}{res}{space 2} .1215392{col 26}{space 2} .0243402{col 37}{space 1}    4.99{col 46}{space 3}0.000{col 54}{space 4} .0736464{col 67}{space 3} .1694321
+{txt}{space 5}prpncar {c |}{col 14}{res}{space 2} .0868463{col 26}{space 2} .1194198{col 37}{space 1}    0.73{col 46}{space 3}0.468{col 54}{space 4}-.1481297{col 67}{space 3} .3218222
+{txt}{space 10}NJ {c |}{col 14}{res}{space 2} .0556001{col 26}{space 2} .0103079{col 37}{space 1}    5.39{col 46}{space 3}0.000{col 54}{space 4} .0353177{col 67}{space 3} .0758825
+{txt}{space 12} {c |}
+{space 7}chain {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .4023302{col 26}{space 2} .0098151{col 37}{space 1}   40.99{col 46}{space 3}0.000{col 54}{space 4} .3830175{col 67}{space 3} .4216428
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .0821738{col 26}{space 2} .0108458{col 37}{space 1}    7.58{col 46}{space 3}0.000{col 54}{space 4} .0608331{col 67}{space 3} .1035145
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .0787007{col 26}{space 2} .0179255{col 37}{space 1}    4.39{col 46}{space 3}0.000{col 54}{space 4} .0434297{col 67}{space 3} .1139716
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} 1.139272{col 26}{space 2} .2703108{col 37}{space 1}    4.21{col 46}{space 3}0.000{col 54}{space 4} .6073966{col 67}{space 3} 1.671148
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. restore 
+{txt}
+{com}. 
+. preserve
+{txt}
+{com}. 
+. drop if psoda ==.
+{txt}(8 observations deleted)
+
+{com}. drop if psoda2 ==.
+{txt}(22 observations deleted)
+
+{com}. drop if pfries ==.
+{txt}(10 observations deleted)
+
+{com}. drop if pfries2 ==.
+{txt}(9 observations deleted)
+
+{com}. drop if pentree ==.
+{txt}(4 observations deleted)
+
+{com}. drop if pentree2 ==.
+{txt}(1 observation deleted)
+
+{com}. 
+. // Values for column 4,5 and 6
+. 
+. reg lameal prpblck lincome prppov i.chain, robust
+
+{txt}Linear regression                               Number of obs     = {res}       355
+                                                {txt}F(6, 348)         =  {res}   274.76
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.7564
+                                                {txt}Root MSE          =    {res} .08661
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}      lameal{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}prpblck {c |}{col 14}{res}{space 2} .0945645{col 26}{space 2} .0384204{col 37}{space 1}    2.46{col 46}{space 3}0.014{col 54}{space 4} .0189991{col 67}{space 3}   .17013
+{txt}{space 5}lincome {c |}{col 14}{res}{space 2}  .086155{col 26}{space 2} .0296702{col 37}{space 1}    2.90{col 46}{space 3}0.004{col 54}{space 4} .0277995{col 67}{space 3} .1445105
+{txt}{space 6}prppov {c |}{col 14}{res}{space 2} .0387931{col 26}{space 2} .1597616{col 37}{space 1}    0.24{col 46}{space 3}0.808{col 54}{space 4}-.2754266{col 67}{space 3} .3530128
+{txt}{space 12} {c |}
+{space 7}chain {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .3937493{col 26}{space 2} .0104311{col 37}{space 1}   37.75{col 46}{space 3}0.000{col 54}{space 4} .3732333{col 67}{space 3} .4142653
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .0829554{col 26}{space 2} .0125218{col 37}{space 1}    6.62{col 46}{space 3}0.000{col 54}{space 4} .0583275{col 67}{space 3} .1075833
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .0708028{col 26}{space 2} .0179683{col 37}{space 1}    3.94{col 46}{space 3}0.000{col 54}{space 4} .0354626{col 67}{space 3}  .106143
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .1374012{col 26}{space 2} .3261334{col 37}{space 1}    0.42{col 46}{space 3}0.674{col 54}{space 4}-.5040394{col 67}{space 3} .7788418
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg lameal prpblck i.chain, robust
+
+{txt}Linear regression                               Number of obs     = {res}       355
+                                                {txt}F(4, 350)         =  {res}   382.28
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.7444
+                                                {txt}Root MSE          =    {res} .08848
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}      lameal{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}prpblck {c |}{col 14}{res}{space 2} .0345742{col 26}{space 2} .0238988{col 37}{space 1}    1.45{col 46}{space 3}0.149{col 54}{space 4} -.012429{col 67}{space 3} .0815775
+{txt}{space 12} {c |}
+{space 7}chain {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .3895071{col 26}{space 2} .0104055{col 37}{space 1}   37.43{col 46}{space 3}0.000{col 54}{space 4}  .369042{col 67}{space 3} .4099723
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .0892103{col 26}{space 2}  .012927{col 37}{space 1}    6.90{col 46}{space 3}0.000{col 54}{space 4} .0637859{col 67}{space 3} .1146346
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .0656479{col 26}{space 2} .0183412{col 37}{space 1}    3.58{col 46}{space 3}0.000{col 54}{space 4}  .029575{col 67}{space 3} .1017207
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} 1.070848{col 26}{space 2}  .006137{col 37}{space 1}  174.49{col 46}{space 3}0.000{col 54}{space 4} 1.058778{col 67}{space 3} 1.082918
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg lameal lincome i.chain, robust
+
+{txt}Linear regression                               Number of obs     = {res}       355
+                                                {txt}F(4, 350)         =  {res}   392.03
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.7485
+                                                {txt}Root MSE          =    {res} .08776
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}      lameal{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}lincome {c |}{col 14}{res}{space 2} .0458181{col 26}{space 2} .0159145{col 37}{space 1}    2.88{col 46}{space 3}0.004{col 54}{space 4}  .014518{col 67}{space 3} .0771182
+{txt}{space 12} {c |}
+{space 7}chain {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .3973591{col 26}{space 2} .0105498{col 37}{space 1}   37.67{col 46}{space 3}0.000{col 54}{space 4} .3766101{col 67}{space 3} .4181081
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .0879504{col 26}{space 2} .0125977{col 37}{space 1}    6.98{col 46}{space 3}0.000{col 54}{space 4} .0631736{col 67}{space 3} .1127272
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .0695291{col 26}{space 2} .0183834{col 37}{space 1}    3.78{col 46}{space 3}0.000{col 54}{space 4} .0333733{col 67}{space 3} .1056849
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .5818595{col 26}{space 2} .1722094{col 37}{space 1}    3.38{col 46}{space 3}0.001{col 54}{space 4} .2431641{col 67}{space 3} .9205549
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. // restoring previously dropped value
+. restore
+{txt}
+{com}. 
+. preserve
+{txt}
+{com}. 
+. 
+. 
+. 
+. ///*****QUESTION VII******///
+> 
+. //Dropping the same variables dropped in table 2 for columns 1,2 and 3
+. 
+. drop if wagest ==.
+{txt}(20 observations deleted)
+
+{com}. drop if emp ==.
+{txt}(5 observations deleted)
+
+{com}. drop if psoda ==.
+{txt}(7 observations deleted)
+
+{com}. drop if pfries ==.
+{txt}(9 observations deleted)
+
+{com}. drop if pentree ==.
+{txt}(5 observations deleted)
+
+{com}. drop if wagest2 ==.
+{txt}(19 observations deleted)
+
+{com}. drop if emp2 ==.
+{txt}(7 observations deleted)
+
+{com}. drop if psoda2 ==.
+{txt}(9 observations deleted)
+
+{com}. drop if pfries2 ==.
+{txt}(5 observations deleted)
+
+{com}. drop if pentree2 ==.
+{txt}(0 observations deleted)
+
+{com}. drop if crmrte ==.
+{txt}(1 observation deleted)
+
+{com}. 
+. //F statistics, p-values and degrees of freedom generation for First 3 columns
+. 
+. reg lameal prpblck lincome prppov ldensity lawagest laemp crmrte lhseval compown prpncar NJ storec i.chain, robust
+
+{txt}Linear regression                               Number of obs     = {res}       322
+                                                {txt}F(15, 306)        =  {res}   146.63
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.8351
+                                                {txt}Root MSE          =    {res} .07339
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}      lameal{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}prpblck {c |}{col 14}{res}{space 2} .1079779{col 26}{space 2} .0374768{col 37}{space 1}    2.88{col 46}{space 3}0.004{col 54}{space 4} .0342331{col 67}{space 3} .1817227
+{txt}{space 5}lincome {c |}{col 14}{res}{space 2}-.1572286{col 26}{space 2} .0400679{col 37}{space 1}   -3.92{col 46}{space 3}0.000{col 54}{space 4}-.2360721{col 67}{space 3}-.0783852
+{txt}{space 6}prppov {c |}{col 14}{res}{space 2}-.7281494{col 26}{space 2} .2337233{col 37}{space 1}   -3.12{col 46}{space 3}0.002{col 54}{space 4}-1.188058{col 67}{space 3}-.2682411
+{txt}{space 4}ldensity {c |}{col 14}{res}{space 2}  .007565{col 26}{space 2} .0054386{col 37}{space 1}    1.39{col 46}{space 3}0.165{col 54}{space 4}-.0031367{col 67}{space 3} .0182667
+{txt}{space 4}lawagest {c |}{col 14}{res}{space 2} .0299345{col 26}{space 2} .1036817{col 37}{space 1}    0.29{col 46}{space 3}0.773{col 54}{space 4}-.1740848{col 67}{space 3} .2339537
+{txt}{space 7}laemp {c |}{col 14}{res}{space 2}-.0322962{col 26}{space 2} .0154388{col 37}{space 1}   -2.09{col 46}{space 3}0.037{col 54}{space 4}-.0626758{col 67}{space 3}-.0019167
+{txt}{space 6}crmrte {c |}{col 14}{res}{space 2} .2310649{col 26}{space 2} .1282143{col 37}{space 1}    1.80{col 46}{space 3}0.073{col 54}{space 4}-.0212284{col 67}{space 3} .4833582
+{txt}{space 5}lhseval {c |}{col 14}{res}{space 2} .1212225{col 26}{space 2} .0236557{col 37}{space 1}    5.12{col 46}{space 3}0.000{col 54}{space 4} .0746742{col 67}{space 3} .1677709
+{txt}{space 5}compown {c |}{col 14}{res}{space 2}-.0276587{col 26}{space 2} .0104231{col 37}{space 1}   -2.65{col 46}{space 3}0.008{col 54}{space 4}-.0481688{col 67}{space 3}-.0071487
+{txt}{space 5}prpncar {c |}{col 14}{res}{space 2} .0594739{col 26}{space 2} .1148319{col 37}{space 1}    0.52{col 46}{space 3}0.605{col 54}{space 4}-.1664862{col 67}{space 3} .2854341
+{txt}{space 10}NJ {c |}{col 14}{res}{space 2} .0495371{col 26}{space 2} .0104896{col 37}{space 1}    4.72{col 46}{space 3}0.000{col 54}{space 4} .0288962{col 67}{space 3}  .070178
+{txt}{space 6}storec {c |}{col 14}{res}{space 2} .0239898{col 26}{space 2} .0099205{col 37}{space 1}    2.42{col 46}{space 3}0.016{col 54}{space 4} .0044689{col 67}{space 3} .0435108
+{txt}{space 12} {c |}
+{space 7}chain {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .3882283{col 26}{space 2} .0149089{col 37}{space 1}   26.04{col 46}{space 3}0.000{col 54}{space 4} .3588914{col 67}{space 3} .4175651
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}  .088652{col 26}{space 2} .0123397{col 37}{space 1}    7.18{col 46}{space 3}0.000{col 54}{space 4} .0643705{col 67}{space 3} .1129334
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .0798922{col 26}{space 2} .0176661{col 37}{space 1}    4.52{col 46}{space 3}0.000{col 54}{space 4} .0451298{col 67}{space 3} .1146546
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} 1.280523{col 26}{space 2} .2891434{col 37}{space 1}    4.43{col 46}{space 3}0.000{col 54}{space 4} .7115615{col 67}{space 3} 1.849484
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. testparm i.chain
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}2.chain = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} 3.chain = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} 4.chain = 0{p_end}
+
+{txt}       F(  3,   306) ={res}  227.37
+{txt}{col 13}Prob > F ={res}    0.0000
+{txt}
+{com}. 
+. reg lameal prpblck lincome prppov ldensity lawagest laemp crmrte lhseval compown prpncar storec i.county i.chain, robust
+
+{txt}Linear regression                               Number of obs     = {res}       322
+                                                {txt}{help j_robustsingular:F(39, 279) }       =  {res}        .
+                                                {txt}Prob > F          = {res}         .
+                                                {txt}R-squared         = {res}    0.8628
+                                                {txt}Root MSE          =    {res} .07011
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}      lameal{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}prpblck {c |}{col 14}{res}{space 2} .0954547{col 26}{space 2} .0421648{col 37}{space 1}    2.26{col 46}{space 3}0.024{col 54}{space 4} .0124532{col 67}{space 3} .1784562
+{txt}{space 5}lincome {c |}{col 14}{res}{space 2} -.072325{col 26}{space 2} .0507414{col 37}{space 1}   -1.43{col 46}{space 3}0.155{col 54}{space 4}-.1722097{col 67}{space 3} .0275596
+{txt}{space 6}prppov {c |}{col 14}{res}{space 2}-.4687878{col 26}{space 2} .2801735{col 37}{space 1}   -1.67{col 46}{space 3}0.095{col 54}{space 4} -1.02031{col 67}{space 3} .0827346
+{txt}{space 4}ldensity {c |}{col 14}{res}{space 2} .0022783{col 26}{space 2} .0059258{col 37}{space 1}    0.38{col 46}{space 3}0.701{col 54}{space 4}-.0093866{col 67}{space 3} .0139432
+{txt}{space 4}lawagest {c |}{col 14}{res}{space 2} .0534256{col 26}{space 2} .1161626{col 37}{space 1}    0.46{col 46}{space 3}0.646{col 54}{space 4}-.1752408{col 67}{space 3}  .282092
+{txt}{space 7}laemp {c |}{col 14}{res}{space 2}-.0430796{col 26}{space 2} .0173531{col 37}{space 1}   -2.48{col 46}{space 3}0.014{col 54}{space 4}-.0772392{col 67}{space 3}-.0089199
+{txt}{space 6}crmrte {c |}{col 14}{res}{space 2} .1999766{col 26}{space 2} .1382574{col 37}{space 1}    1.45{col 46}{space 3}0.149{col 54}{space 4}-.0721834{col 67}{space 3} .4721366
+{txt}{space 5}lhseval {c |}{col 14}{res}{space 2} .0257476{col 26}{space 2} .0367208{col 37}{space 1}    0.70{col 46}{space 3}0.484{col 54}{space 4}-.0465374{col 67}{space 3} .0980325
+{txt}{space 5}compown {c |}{col 14}{res}{space 2} -.019999{col 26}{space 2} .0108063{col 37}{space 1}   -1.85{col 46}{space 3}0.065{col 54}{space 4}-.0412712{col 67}{space 3} .0012731
+{txt}{space 5}prpncar {c |}{col 14}{res}{space 2}-.0630355{col 26}{space 2} .1498945{col 37}{space 1}   -0.42{col 46}{space 3}0.674{col 54}{space 4}-.3581034{col 67}{space 3} .2320323
+{txt}{space 6}storec {c |}{col 14}{res}{space 2} .0208499{col 26}{space 2} .0105838{col 37}{space 1}    1.97{col 46}{space 3}0.050{col 54}{space 4} .0000156{col 67}{space 3} .0416842
+{txt}{space 12} {c |}
+{space 6}county {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .0683802{col 26}{space 2} .0326496{col 37}{space 1}    2.09{col 46}{space 3}0.037{col 54}{space 4} .0041094{col 67}{space 3} .1326511
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.0397994{col 26}{space 2} .0297775{col 37}{space 1}   -1.34{col 46}{space 3}0.182{col 54}{space 4}-.0984166{col 67}{space 3} .0188177
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.0438057{col 26}{space 2} .0333016{col 37}{space 1}   -1.32{col 46}{space 3}0.189{col 54}{space 4}  -.10936{col 67}{space 3} .0217485
+{txt}{space 10}5  {c |}{col 14}{res}{space 2}-.0661033{col 26}{space 2} .0291852{col 37}{space 1}   -2.26{col 46}{space 3}0.024{col 54}{space 4}-.1235546{col 67}{space 3}-.0086521
+{txt}{space 10}6  {c |}{col 14}{res}{space 2} -.048845{col 26}{space 2}  .031259{col 37}{space 1}   -1.56{col 46}{space 3}0.119{col 54}{space 4}-.1103785{col 67}{space 3} .0126885
+{txt}{space 10}7  {c |}{col 14}{res}{space 2}-.0021076{col 26}{space 2}  .039297{col 37}{space 1}   -0.05{col 46}{space 3}0.957{col 54}{space 4}-.0794639{col 67}{space 3} .0752488
+{txt}{space 10}8  {c |}{col 14}{res}{space 2}-.1065649{col 26}{space 2} .0318685{col 37}{space 1}   -3.34{col 46}{space 3}0.001{col 54}{space 4}-.1692981{col 67}{space 3}-.0438317
+{txt}{space 10}9  {c |}{col 14}{res}{space 2} -.060232{col 26}{space 2} .0433952{col 37}{space 1}   -1.39{col 46}{space 3}0.166{col 54}{space 4}-.1456557{col 67}{space 3} .0251916
+{txt}{space 9}10  {c |}{col 14}{res}{space 2} .0338094{col 26}{space 2} .0327127{col 37}{space 1}    1.03{col 46}{space 3}0.302{col 54}{space 4}-.0305857{col 67}{space 3} .0982044
+{txt}{space 9}11  {c |}{col 14}{res}{space 2}-.0440274{col 26}{space 2}  .035294{col 37}{space 1}   -1.25{col 46}{space 3}0.213{col 54}{space 4}-.1135038{col 67}{space 3}  .025449
+{txt}{space 9}12  {c |}{col 14}{res}{space 2} .0429242{col 26}{space 2}   .03673{col 37}{space 1}    1.17{col 46}{space 3}0.244{col 54}{space 4}-.0293789{col 67}{space 3} .1152274
+{txt}{space 9}13  {c |}{col 14}{res}{space 2} .0311161{col 26}{space 2} .0306351{col 37}{space 1}    1.02{col 46}{space 3}0.311{col 54}{space 4}-.0291892{col 67}{space 3} .0914214
+{txt}{space 9}14  {c |}{col 14}{res}{space 2}-.0283528{col 26}{space 2} .0748154{col 37}{space 1}   -0.38{col 46}{space 3}0.705{col 54}{space 4}-.1756271{col 67}{space 3} .1189216
+{txt}{space 9}15  {c |}{col 14}{res}{space 2}-.0605662{col 26}{space 2} .0386861{col 37}{space 1}   -1.57{col 46}{space 3}0.119{col 54}{space 4}  -.13672{col 67}{space 3} .0155876
+{txt}{space 9}16  {c |}{col 14}{res}{space 2}-.0632961{col 26}{space 2}   .04952{col 37}{space 1}   -1.28{col 46}{space 3}0.202{col 54}{space 4}-.1607763{col 67}{space 3} .0341841
+{txt}{space 9}17  {c |}{col 14}{res}{space 2} .0367234{col 26}{space 2} .0374047{col 37}{space 1}    0.98{col 46}{space 3}0.327{col 54}{space 4}-.0369079{col 67}{space 3} .1103547
+{txt}{space 9}18  {c |}{col 14}{res}{space 2} .0393041{col 26}{space 2} .0344035{col 37}{space 1}    1.14{col 46}{space 3}0.254{col 54}{space 4}-.0284193{col 67}{space 3} .1070274
+{txt}{space 9}19  {c |}{col 14}{res}{space 2} .0444702{col 26}{space 2} .0303208{col 37}{space 1}    1.47{col 46}{space 3}0.144{col 54}{space 4}-.0152164{col 67}{space 3} .1041568
+{txt}{space 9}20  {c |}{col 14}{res}{space 2}-.0551255{col 26}{space 2} .0276285{col 37}{space 1}   -2.00{col 46}{space 3}0.047{col 54}{space 4}-.1095123{col 67}{space 3}-.0007388
+{txt}{space 9}21  {c |}{col 14}{res}{space 2}  -.00475{col 26}{space 2} .0305303{col 37}{space 1}   -0.16{col 46}{space 3}0.876{col 54}{space 4} -.064849{col 67}{space 3} .0553489
+{txt}{space 9}22  {c |}{col 14}{res}{space 2}-.1120344{col 26}{space 2} .0312299{col 37}{space 1}   -3.59{col 46}{space 3}0.000{col 54}{space 4}-.1735105{col 67}{space 3}-.0505582
+{txt}{space 9}23  {c |}{col 14}{res}{space 2}  .019745{col 26}{space 2} .0295396{col 37}{space 1}    0.67{col 46}{space 3}0.504{col 54}{space 4}-.0384038{col 67}{space 3} .0778938
+{txt}{space 9}24  {c |}{col 14}{res}{space 2} .0492227{col 26}{space 2} .0350046{col 37}{space 1}    1.41{col 46}{space 3}0.161{col 54}{space 4} -.019684{col 67}{space 3} .1181295
+{txt}{space 9}25  {c |}{col 14}{res}{space 2}-.0430253{col 26}{space 2}  .039787{col 37}{space 1}   -1.08{col 46}{space 3}0.280{col 54}{space 4}-.1213461{col 67}{space 3} .0352955
+{txt}{space 9}26  {c |}{col 14}{res}{space 2}-.0153208{col 26}{space 2} .0280234{col 37}{space 1}   -0.55{col 46}{space 3}0.585{col 54}{space 4}-.0704849{col 67}{space 3} .0398433
+{txt}{space 9}27  {c |}{col 14}{res}{space 2} .0664527{col 26}{space 2} .0280553{col 37}{space 1}    2.37{col 46}{space 3}0.019{col 54}{space 4} .0112258{col 67}{space 3} .1216796
+{txt}{space 9}28  {c |}{col 14}{res}{space 2}  .073017{col 26}{space 2} .0423821{col 37}{space 1}    1.72{col 46}{space 3}0.086{col 54}{space 4}-.0104124{col 67}{space 3} .1564464
+{txt}{space 9}29  {c |}{col 14}{res}{space 2}-.0512427{col 26}{space 2} .0296127{col 37}{space 1}   -1.73{col 46}{space 3}0.085{col 54}{space 4}-.1095353{col 67}{space 3} .0070499
+{txt}{space 12} {c |}
+{space 7}chain {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .3771348{col 26}{space 2} .0157927{col 37}{space 1}   23.88{col 46}{space 3}0.000{col 54}{space 4} .3460467{col 67}{space 3} .4082229
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .0801313{col 26}{space 2} .0119462{col 37}{space 1}    6.71{col 46}{space 3}0.000{col 54}{space 4} .0566152{col 67}{space 3} .1036475
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}  .072295{col 26}{space 2} .0177224{col 37}{space 1}    4.08{col 46}{space 3}0.000{col 54}{space 4} .0374083{col 67}{space 3} .1071816
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} 1.578101{col 26}{space 2}   .35942{col 37}{space 1}    4.39{col 46}{space 3}0.000{col 54}{space 4} .8705814{col 67}{space 3}  2.28562
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. testparm i.chain i.county
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}2.county = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} 3.county = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} 4.county = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} 5.county = 0{p_end}
+{p 0 7}{space 1}{text:( 5)}{space 1} 6.county = 0{p_end}
+{p 0 7}{space 1}{text:( 6)}{space 1} 7.county = 0{p_end}
+{p 0 7}{space 1}{text:( 7)}{space 1} 8.county = 0{p_end}
+{p 0 7}{space 1}{text:( 8)}{space 1} 9.county = 0{p_end}
+{p 0 7}{space 1}{text:( 9)}{space 1} 10.county = 0{p_end}
+{p 0 7}{space 1}{text:(10)}{space 1} 11.county = 0{p_end}
+{p 0 7}{space 1}{text:(11)}{space 1} 12.county = 0{p_end}
+{p 0 7}{space 1}{text:(12)}{space 1} 13.county = 0{p_end}
+{p 0 7}{space 1}{text:(13)}{space 1} 14.county = 0{p_end}
+{p 0 7}{space 1}{text:(14)}{space 1} 15.county = 0{p_end}
+{p 0 7}{space 1}{text:(15)}{space 1} 16.county = 0{p_end}
+{p 0 7}{space 1}{text:(16)}{space 1} 17.county = 0{p_end}
+{p 0 7}{space 1}{text:(17)}{space 1} 18.county = 0{p_end}
+{p 0 7}{space 1}{text:(18)}{space 1} 19.county = 0{p_end}
+{p 0 7}{space 1}{text:(19)}{space 1} 20.county = 0{p_end}
+{p 0 7}{space 1}{text:(20)}{space 1} 21.county = 0{p_end}
+{p 0 7}{space 1}{text:(21)}{space 1} 22.county = 0{p_end}
+{p 0 7}{space 1}{text:(22)}{space 1} 23.county = 0{p_end}
+{p 0 7}{space 1}{text:(23)}{space 1} 24.county = 0{p_end}
+{p 0 7}{space 1}{text:(24)}{space 1} 25.county = 0{p_end}
+{p 0 7}{space 1}{text:(25)}{space 1} 26.county = 0{p_end}
+{p 0 7}{space 1}{text:(26)}{space 1} 27.county = 0{p_end}
+{p 0 7}{space 1}{text:(27)}{space 1} 28.county = 0{p_end}
+{p 0 7}{space 1}{text:(28)}{space 1} 29.county = 0{p_end}
+{p 0 7}{space 1}{text:(29)}{space 1} 2.chain = 0{p_end}
+{p 0 7}{space 1}{text:(30)}{space 1} 3.chain = 0{p_end}
+{p 0 7}{space 1}{text:(31)}{space 1} 4.chain = 0{p_end}
+
+{txt}       F( 31,   279) ={res}   50.88
+{txt}{col 13}Prob > F ={res}    0.0000
+{txt}
+{com}. 
+. reg lameal prpblck lincome prppov ldensity crmrte lhseval prpncar NJ i.chain, robust
+
+{txt}Linear regression                               Number of obs     = {res}       322
+                                                {txt}F(11, 310)        =  {res}   191.08
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.8254
+                                                {txt}Root MSE          =    {res} .07503
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}      lameal{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}prpblck {c |}{col 14}{res}{space 2} .0757692{col 26}{space 2} .0386185{col 37}{space 1}    1.96{col 46}{space 3}0.051{col 54}{space 4}-.0002183{col 67}{space 3} .1517566
+{txt}{space 5}lincome {c |}{col 14}{res}{space 2}-.1459815{col 26}{space 2} .0397801{col 37}{space 1}   -3.67{col 46}{space 3}0.000{col 54}{space 4}-.2242546{col 67}{space 3}-.0677084
+{txt}{space 6}prppov {c |}{col 14}{res}{space 2}-.6122363{col 26}{space 2} .2371189{col 37}{space 1}   -2.58{col 46}{space 3}0.010{col 54}{space 4}-1.078802{col 67}{space 3}-.1456703
+{txt}{space 4}ldensity {c |}{col 14}{res}{space 2}  .003883{col 26}{space 2}  .005441{col 37}{space 1}    0.71{col 46}{space 3}0.476{col 54}{space 4}-.0068229{col 67}{space 3} .0145889
+{txt}{space 6}crmrte {c |}{col 14}{res}{space 2} .1684353{col 26}{space 2} .1308141{col 37}{space 1}    1.29{col 46}{space 3}0.199{col 54}{space 4}-.0889605{col 67}{space 3} .4258311
+{txt}{space 5}lhseval {c |}{col 14}{res}{space 2} .1215392{col 26}{space 2} .0243402{col 37}{space 1}    4.99{col 46}{space 3}0.000{col 54}{space 4} .0736464{col 67}{space 3} .1694321
+{txt}{space 5}prpncar {c |}{col 14}{res}{space 2} .0868463{col 26}{space 2} .1194198{col 37}{space 1}    0.73{col 46}{space 3}0.468{col 54}{space 4}-.1481297{col 67}{space 3} .3218222
+{txt}{space 10}NJ {c |}{col 14}{res}{space 2} .0556001{col 26}{space 2} .0103079{col 37}{space 1}    5.39{col 46}{space 3}0.000{col 54}{space 4} .0353177{col 67}{space 3} .0758825
+{txt}{space 12} {c |}
+{space 7}chain {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .4023302{col 26}{space 2} .0098151{col 37}{space 1}   40.99{col 46}{space 3}0.000{col 54}{space 4} .3830175{col 67}{space 3} .4216428
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .0821738{col 26}{space 2} .0108458{col 37}{space 1}    7.58{col 46}{space 3}0.000{col 54}{space 4} .0608331{col 67}{space 3} .1035145
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .0787007{col 26}{space 2} .0179255{col 37}{space 1}    4.39{col 46}{space 3}0.000{col 54}{space 4} .0434297{col 67}{space 3} .1139716
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} 1.139272{col 26}{space 2} .2703108{col 37}{space 1}    4.21{col 46}{space 3}0.000{col 54}{space 4} .6073966{col 67}{space 3} 1.671148
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. testparm i.chain
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}2.chain = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} 3.chain = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} 4.chain = 0{p_end}
+
+{txt}       F(  3,   310) ={res}  560.20
+{txt}{col 13}Prob > F ={res}    0.0000
+{txt}
+{com}. 
+. //Testparm used to chain and county dummy variables
+. 
+. restore
+{txt}
+{com}. 
+. preserve
+{txt}
+{com}. 
+. //Dropping the same variables dropped in table 2 for columns 4,5 and 6
+. 
+. drop if psoda ==.
+{txt}(8 observations deleted)
+
+{com}. drop if pfries ==.
+{txt}(10 observations deleted)
+
+{com}. drop if pentree ==.
+{txt}(5 observations deleted)
+
+{com}. drop if psoda2 ==.
+{txt}(22 observations deleted)
+
+{com}. drop if pfries2 ==.
+{txt}(8 observations deleted)
+
+{com}. drop if pentree2 ==.
+{txt}(1 observation deleted)
+
+{com}. 
+. reg lameal prpblck lincome prppov i.chain, robust
+
+{txt}Linear regression                               Number of obs     = {res}       355
+                                                {txt}F(6, 348)         =  {res}   274.76
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.7564
+                                                {txt}Root MSE          =    {res} .08661
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}      lameal{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}prpblck {c |}{col 14}{res}{space 2} .0945645{col 26}{space 2} .0384204{col 37}{space 1}    2.46{col 46}{space 3}0.014{col 54}{space 4} .0189991{col 67}{space 3}   .17013
+{txt}{space 5}lincome {c |}{col 14}{res}{space 2}  .086155{col 26}{space 2} .0296702{col 37}{space 1}    2.90{col 46}{space 3}0.004{col 54}{space 4} .0277995{col 67}{space 3} .1445105
+{txt}{space 6}prppov {c |}{col 14}{res}{space 2} .0387931{col 26}{space 2} .1597616{col 37}{space 1}    0.24{col 46}{space 3}0.808{col 54}{space 4}-.2754266{col 67}{space 3} .3530128
+{txt}{space 12} {c |}
+{space 7}chain {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .3937493{col 26}{space 2} .0104311{col 37}{space 1}   37.75{col 46}{space 3}0.000{col 54}{space 4} .3732333{col 67}{space 3} .4142653
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .0829554{col 26}{space 2} .0125218{col 37}{space 1}    6.62{col 46}{space 3}0.000{col 54}{space 4} .0583275{col 67}{space 3} .1075833
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .0708028{col 26}{space 2} .0179683{col 37}{space 1}    3.94{col 46}{space 3}0.000{col 54}{space 4} .0354626{col 67}{space 3}  .106143
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .1374012{col 26}{space 2} .3261334{col 37}{space 1}    0.42{col 46}{space 3}0.674{col 54}{space 4}-.5040394{col 67}{space 3} .7788418
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. testparm i.chain
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}2.chain = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} 3.chain = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} 4.chain = 0{p_end}
+
+{txt}       F(  3,   348) ={res}  479.46
+{txt}{col 13}Prob > F ={res}    0.0000
+{txt}
+{com}. 
+. reg lameal prpblck i.chain, robust
+
+{txt}Linear regression                               Number of obs     = {res}       355
+                                                {txt}F(4, 350)         =  {res}   382.28
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.7444
+                                                {txt}Root MSE          =    {res} .08848
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}      lameal{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}prpblck {c |}{col 14}{res}{space 2} .0345742{col 26}{space 2} .0238988{col 37}{space 1}    1.45{col 46}{space 3}0.149{col 54}{space 4} -.012429{col 67}{space 3} .0815775
+{txt}{space 12} {c |}
+{space 7}chain {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .3895071{col 26}{space 2} .0104055{col 37}{space 1}   37.43{col 46}{space 3}0.000{col 54}{space 4}  .369042{col 67}{space 3} .4099723
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .0892103{col 26}{space 2}  .012927{col 37}{space 1}    6.90{col 46}{space 3}0.000{col 54}{space 4} .0637859{col 67}{space 3} .1146346
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .0656479{col 26}{space 2} .0183412{col 37}{space 1}    3.58{col 46}{space 3}0.000{col 54}{space 4}  .029575{col 67}{space 3} .1017207
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} 1.070848{col 26}{space 2}  .006137{col 37}{space 1}  174.49{col 46}{space 3}0.000{col 54}{space 4} 1.058778{col 67}{space 3} 1.082918
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. testparm i.chain
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}2.chain = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} 3.chain = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} 4.chain = 0{p_end}
+
+{txt}       F(  3,   350) ={res}  471.95
+{txt}{col 13}Prob > F ={res}    0.0000
+{txt}
+{com}. 
+. reg lameal lincome i.chain, robust
+
+{txt}Linear regression                               Number of obs     = {res}       355
+                                                {txt}F(4, 350)         =  {res}   392.03
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.7485
+                                                {txt}Root MSE          =    {res} .08776
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}      lameal{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}lincome {c |}{col 14}{res}{space 2} .0458181{col 26}{space 2} .0159145{col 37}{space 1}    2.88{col 46}{space 3}0.004{col 54}{space 4}  .014518{col 67}{space 3} .0771182
+{txt}{space 12} {c |}
+{space 7}chain {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .3973591{col 26}{space 2} .0105498{col 37}{space 1}   37.67{col 46}{space 3}0.000{col 54}{space 4} .3766101{col 67}{space 3} .4181081
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .0879504{col 26}{space 2} .0125977{col 37}{space 1}    6.98{col 46}{space 3}0.000{col 54}{space 4} .0631736{col 67}{space 3} .1127272
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .0695291{col 26}{space 2} .0183834{col 37}{space 1}    3.78{col 46}{space 3}0.000{col 54}{space 4} .0333733{col 67}{space 3} .1056849
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .5818595{col 26}{space 2} .1722094{col 37}{space 1}    3.38{col 46}{space 3}0.001{col 54}{space 4} .2431641{col 67}{space 3} .9205549
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. testparm i.chain
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}2.chain = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} 3.chain = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} 4.chain = 0{p_end}
+
+{txt}       F(  3,   350) ={res}  477.54
+{txt}{col 13}Prob > F ={res}    0.0000
+{txt}
+{com}. 
+. restore
+{txt}
+{com}. 
+. preserve
+{txt}
+{com}. 
+. 
+. 
+. ///*****QUESTION VIII******///
+> 
+. 
+. sum prpncar, detail
+
+                 {txt}proportion no car, zipcode
+{hline 61}
+      Percentiles      Smallest
+ 1%    {res} .0118074              0
+{txt} 5%    {res} .0219448       .0058224
+{txt}10%    {res} .0316048       .0071392       {txt}Obs         {res}        409
+{txt}25%    {res} .0435306       .0102362       {txt}Sum of Wgt. {res}        409
+
+{txt}50%    {res} .0738916                      {txt}Mean          {res} .1148737
+                        {txt}Largest       Std. Dev.     {res} .1174157
+{txt}75%    {res} .1234823        .544033
+{txt}90%    {res} .2604226        .544033       {txt}Variance      {res} .0137864
+{txt}95%    {res} .3980173       .6166425       {txt}Skewness      {res} 2.215074
+{txt}99%    {res}  .544033       .6272376       {txt}Kurtosis      {res}  7.63961
+{txt}
+{com}. //Median observed at .0738916
+. 
+. //Generating average prices over the 2 periods
+. 
+. gen apentree = (pentree + pentree2)/2
+{txt}(35 missing values generated)
+
+{com}. gen lapentree = log(apentree)
+{txt}(35 missing values generated)
+
+{com}. gen apfries = (pfries + pfries2)/2
+{txt}(44 missing values generated)
+
+{com}. gen lapfries = log(apfries)
+{txt}(44 missing values generated)
+
+{com}. gen apsoda = (psoda + psoda2)/2
+{txt}(30 missing values generated)
+
+{com}. gen lapsoda = log(apsoda)
+{txt}(30 missing values generated)
+
+{com}. 
+. //Generating franchise variable to use in the regression
+. gen franchise = 0
+{txt}
+{com}. 
+. replace franchise = 1 if compown ==0
+{txt}(269 real changes made)
+
+{com}. // If the store is a franchise, the dummy variable is equal to 1
+. 
+. //Generating other values used in the regression
+. gen prpncar1 = prpncar>.0738916 //based on the median
+{txt}
+{com}. gen prpblckcar = prpblck * prpncar1
+{txt}
+{com}. gen prpblckfranchise = prpblck * franchise
+{txt}
+{com}. gen prpblckstorec = prpblck * storec
+{txt}
+{com}. 
+. 
+. //column MEAL regression
+. 
+. reg lameal prpblck lincome prppov ldensity lawagest laemp crmrte lhseval compown prpncar storec NJ prpblckstorec prpblckfranchise prpblckcar i.chain, robust
+
+{txt}Linear regression                               Number of obs     = {res}       322
+                                                {txt}F(18, 303)        =  {res}   122.61
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.8373
+                                                {txt}Root MSE          =    {res} .07327
+
+{txt}{hline 17}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 18}{c |}{col 30}    Robust
+{col 1}          lameal{col 18}{c |}      Coef.{col 30}   Std. Err.{col 42}      t{col 50}   P>|t|{col 58}     [95% Con{col 71}f. Interval]
+{hline 17}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}prpblck {c |}{col 18}{res}{space 2}  .127466{col 30}{space 2} .0849086{col 41}{space 1}    1.50{col 50}{space 3}0.134{col 58}{space 4}-.0396192{col 71}{space 3} .2945511
+{txt}{space 9}lincome {c |}{col 18}{res}{space 2}-.1551275{col 30}{space 2} .0406515{col 41}{space 1}   -3.82{col 50}{space 3}0.000{col 58}{space 4}-.2351225{col 71}{space 3}-.0751325
+{txt}{space 10}prppov {c |}{col 18}{res}{space 2}-.6500198{col 30}{space 2} .2657776{col 41}{space 1}   -2.45{col 50}{space 3}0.015{col 58}{space 4}-1.173023{col 71}{space 3}-.1270163
+{txt}{space 8}ldensity {c |}{col 18}{res}{space 2}  .008156{col 30}{space 2} .0058713{col 41}{space 1}    1.39{col 50}{space 3}0.166{col 58}{space 4}-.0033978{col 71}{space 3} .0197097
+{txt}{space 8}lawagest {c |}{col 18}{res}{space 2} .0405268{col 30}{space 2} .1044217{col 41}{space 1}    0.39{col 50}{space 3}0.698{col 58}{space 4}-.1649568{col 71}{space 3} .2460104
+{txt}{space 11}laemp {c |}{col 18}{res}{space 2}-.0279197{col 30}{space 2} .0158597{col 41}{space 1}   -1.76{col 50}{space 3}0.079{col 58}{space 4}-.0591288{col 71}{space 3} .0032894
+{txt}{space 10}crmrte {c |}{col 18}{res}{space 2} .1918142{col 30}{space 2} .1217368{col 41}{space 1}    1.58{col 50}{space 3}0.116{col 58}{space 4}-.0477425{col 71}{space 3} .4313709
+{txt}{space 9}lhseval {c |}{col 18}{res}{space 2} .1199633{col 30}{space 2}  .024186{col 41}{space 1}    4.96{col 50}{space 3}0.000{col 58}{space 4} .0723695{col 71}{space 3} .1675571
+{txt}{space 9}compown {c |}{col 18}{res}{space 2}-.0167249{col 30}{space 2} .0119115{col 41}{space 1}   -1.40{col 50}{space 3}0.161{col 58}{space 4}-.0401646{col 71}{space 3} .0067148
+{txt}{space 9}prpncar {c |}{col 18}{res}{space 2} .0489222{col 30}{space 2} .1340906{col 41}{space 1}    0.36{col 50}{space 3}0.715{col 58}{space 4}-.2149445{col 71}{space 3}  .312789
+{txt}{space 10}storec {c |}{col 18}{res}{space 2} .0265487{col 30}{space 2} .0119275{col 41}{space 1}    2.23{col 50}{space 3}0.027{col 58}{space 4} .0030773{col 71}{space 3}   .05002
+{txt}{space 14}NJ {c |}{col 18}{res}{space 2} .0506038{col 30}{space 2}  .010556{col 41}{space 1}    4.79{col 50}{space 3}0.000{col 58}{space 4} .0298314{col 71}{space 3} .0713762
+{txt}{space 3}prpblckstorec {c |}{col 18}{res}{space 2}-.0309668{col 30}{space 2} .0559763{col 41}{space 1}   -0.55{col 50}{space 3}0.581{col 58}{space 4}-.1411182{col 71}{space 3} .0791847
+{txt}prpblckfranchise {c |}{col 18}{res}{space 2} .0827754{col 30}{space 2} .0508875{col 41}{space 1}    1.63{col 50}{space 3}0.105{col 58}{space 4}-.0173623{col 71}{space 3} .1829131
+{txt}{space 6}prpblckcar {c |}{col 18}{res}{space 2}-.0549899{col 30}{space 2} .0803691{col 41}{space 1}   -0.68{col 50}{space 3}0.494{col 58}{space 4}-.2131422{col 71}{space 3} .1031624
+{txt}{space 16} {c |}
+{space 11}chain {c |}
+{space 14}2  {c |}{col 18}{res}{space 2} .3912364{col 30}{space 2} .0148323{col 41}{space 1}   26.38{col 50}{space 3}0.000{col 58}{space 4} .3620491{col 71}{space 3} .4204238
+{txt}{space 14}3  {c |}{col 18}{res}{space 2} .0888985{col 30}{space 2} .0123723{col 41}{space 1}    7.19{col 50}{space 3}0.000{col 58}{space 4} .0645521{col 71}{space 3}  .113245
+{txt}{space 14}4  {c |}{col 18}{res}{space 2} .0772013{col 30}{space 2} .0177339{col 41}{space 1}    4.35{col 50}{space 3}0.000{col 58}{space 4}  .042304{col 71}{space 3} .1120985
+{txt}{space 16} {c |}
+{space 11}_cons {c |}{col 18}{res}{space 2} 1.229937{col 30}{space 2}  .292953{col 41}{space 1}    4.20{col 50}{space 3}0.000{col 58}{space 4} .6534572{col 71}{space 3} 1.806417
+{txt}{hline 17}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. //Generating results for column SODA, FRIES and ENTREE
+. 
+. drop if wagest ==.
+{txt}(20 observations deleted)
+
+{com}. drop if emp ==.
+{txt}(5 observations deleted)
+
+{com}. drop if psoda ==.
+{txt}(7 observations deleted)
+
+{com}. drop if pfries ==.
+{txt}(9 observations deleted)
+
+{com}. drop if pentree ==.
+{txt}(5 observations deleted)
+
+{com}. drop if wagest2 ==.
+{txt}(19 observations deleted)
+
+{com}. drop if emp2 ==.
+{txt}(7 observations deleted)
+
+{com}. drop if psoda2 ==.
+{txt}(9 observations deleted)
+
+{com}. drop if pfries2 ==.
+{txt}(5 observations deleted)
+
+{com}. drop if pentree2 ==.
+{txt}(0 observations deleted)
+
+{com}. drop if crmrte ==.
+{txt}(1 observation deleted)
+
+{com}. 
+. reg lapsoda prpblck lincome prppov ldensity lawagest laemp crmrte lhseval compown prpncar storec NJ prpblckstorec prpblckfranchise prpblckcar i.chain, robust
+
+{txt}Linear regression                               Number of obs     = {res}       322
+                                                {txt}F(18, 303)        =  {res}    18.31
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.5022
+                                                {txt}Root MSE          =    {res}  .0553
+
+{txt}{hline 17}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 18}{c |}{col 30}    Robust
+{col 1}         lapsoda{col 18}{c |}      Coef.{col 30}   Std. Err.{col 42}      t{col 50}   P>|t|{col 58}     [95% Con{col 71}f. Interval]
+{hline 17}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}prpblck {c |}{col 18}{res}{space 2}-.0963707{col 30}{space 2} .0566805{col 41}{space 1}   -1.70{col 50}{space 3}0.090{col 58}{space 4}-.2079079{col 71}{space 3} .0151665
+{txt}{space 9}lincome {c |}{col 18}{res}{space 2}-.0914283{col 30}{space 2} .0282798{col 41}{space 1}   -3.23{col 50}{space 3}0.001{col 58}{space 4}-.1470781{col 71}{space 3}-.0357786
+{txt}{space 10}prppov {c |}{col 18}{res}{space 2}-.3282829{col 30}{space 2} .1549692{col 41}{space 1}   -2.12{col 50}{space 3}0.035{col 58}{space 4} -.633235{col 71}{space 3}-.0233308
+{txt}{space 8}ldensity {c |}{col 18}{res}{space 2}-.0032233{col 30}{space 2} .0046015{col 41}{space 1}   -0.70{col 50}{space 3}0.484{col 58}{space 4}-.0122781{col 71}{space 3} .0058316
+{txt}{space 8}lawagest {c |}{col 18}{res}{space 2}-.0554961{col 30}{space 2} .0737698{col 41}{space 1}   -0.75{col 50}{space 3}0.452{col 58}{space 4} -.200662{col 71}{space 3} .0896698
+{txt}{space 11}laemp {c |}{col 18}{res}{space 2}-.0085218{col 30}{space 2} .0091393{col 41}{space 1}   -0.93{col 50}{space 3}0.352{col 58}{space 4}-.0265063{col 71}{space 3} .0094627
+{txt}{space 10}crmrte {c |}{col 18}{res}{space 2} .1360193{col 30}{space 2} .1162111{col 41}{space 1}    1.17{col 50}{space 3}0.243{col 58}{space 4}-.0926636{col 71}{space 3} .3647022
+{txt}{space 9}lhseval {c |}{col 18}{res}{space 2} .1009537{col 30}{space 2} .0153039{col 41}{space 1}    6.60{col 50}{space 3}0.000{col 58}{space 4} .0708383{col 71}{space 3} .1310691
+{txt}{space 9}compown {c |}{col 18}{res}{space 2}  -.00644{col 30}{space 2} .0082692{col 41}{space 1}   -0.78{col 50}{space 3}0.437{col 58}{space 4}-.0227124{col 71}{space 3} .0098323
+{txt}{space 9}prpncar {c |}{col 18}{res}{space 2} .1011206{col 30}{space 2} .0982964{col 41}{space 1}    1.03{col 50}{space 3}0.304{col 58}{space 4}-.0923094{col 71}{space 3} .2945506
+{txt}{space 10}storec {c |}{col 18}{res}{space 2}-.0074672{col 30}{space 2} .0088466{col 41}{space 1}   -0.84{col 50}{space 3}0.399{col 58}{space 4}-.0248758{col 71}{space 3} .0099414
+{txt}{space 14}NJ {c |}{col 18}{res}{space 2} .0518165{col 30}{space 2} .0083995{col 41}{space 1}    6.17{col 50}{space 3}0.000{col 58}{space 4} .0352877{col 71}{space 3} .0683452
+{txt}{space 3}prpblckstorec {c |}{col 18}{res}{space 2} .0545215{col 30}{space 2} .0419779{col 41}{space 1}    1.30{col 50}{space 3}0.195{col 58}{space 4}-.0280836{col 71}{space 3} .1371266
+{txt}prpblckfranchise {c |}{col 18}{res}{space 2} .0720162{col 30}{space 2} .0403239{col 41}{space 1}    1.79{col 50}{space 3}0.075{col 58}{space 4}-.0073342{col 71}{space 3} .1513665
+{txt}{space 6}prpblckcar {c |}{col 18}{res}{space 2} .1197986{col 30}{space 2} .0523583{col 41}{space 1}    2.29{col 50}{space 3}0.023{col 58}{space 4} .0167666{col 71}{space 3} .2228306
+{txt}{space 16} {c |}
+{space 11}chain {c |}
+{space 14}2  {c |}{col 18}{res}{space 2}-.0458774{col 30}{space 2} .0109245{col 41}{space 1}   -4.20{col 50}{space 3}0.000{col 58}{space 4}-.0673749{col 71}{space 3}-.0243798
+{txt}{space 14}3  {c |}{col 18}{res}{space 2} .0377678{col 30}{space 2} .0085823{col 41}{space 1}    4.40{col 50}{space 3}0.000{col 58}{space 4} .0208793{col 71}{space 3} .0546563
+{txt}{space 14}4  {c |}{col 18}{res}{space 2}-.0454532{col 30}{space 2} .0096234{col 41}{space 1}   -4.72{col 50}{space 3}0.000{col 58}{space 4}-.0643903{col 71}{space 3}-.0265161
+{txt}{space 16} {c |}
+{space 11}_cons {c |}{col 18}{res}{space 2} -.066108{col 30}{space 2} .2332873{col 41}{space 1}   -0.28{col 50}{space 3}0.777{col 58}{space 4}-.5251764{col 71}{space 3} .3929604
+{txt}{hline 17}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg lapfries prpblck lincome prppov ldensity lawagest laemp crmrte lhseval compown prpncar storec NJ prpblckstorec prpblckfranchise prpblckcar i.chain, robust
+
+{txt}Linear regression                               Number of obs     = {res}       322
+                                                {txt}F(18, 303)        =  {res}    36.13
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.6123
+                                                {txt}Root MSE          =    {res} .07134
+
+{txt}{hline 17}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 18}{c |}{col 30}    Robust
+{col 1}        lapfries{col 18}{c |}      Coef.{col 30}   Std. Err.{col 42}      t{col 50}   P>|t|{col 58}     [95% Con{col 71}f. Interval]
+{hline 17}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}prpblck {c |}{col 18}{res}{space 2} .1331213{col 30}{space 2}  .079102{col 41}{space 1}    1.68{col 50}{space 3}0.093{col 58}{space 4}-.0225376{col 71}{space 3} .2887802
+{txt}{space 9}lincome {c |}{col 18}{res}{space 2}-.1400523{col 30}{space 2} .0399404{col 41}{space 1}   -3.51{col 50}{space 3}0.001{col 58}{space 4} -.218648{col 71}{space 3}-.0614566
+{txt}{space 10}prppov {c |}{col 18}{res}{space 2} -.450058{col 30}{space 2} .2056775{col 41}{space 1}   -2.19{col 50}{space 3}0.029{col 58}{space 4}-.8547951{col 71}{space 3}-.0453208
+{txt}{space 8}ldensity {c |}{col 18}{res}{space 2} .0067546{col 30}{space 2} .0057652{col 41}{space 1}    1.17{col 50}{space 3}0.242{col 58}{space 4}-.0045902{col 71}{space 3} .0180994
+{txt}{space 8}lawagest {c |}{col 18}{res}{space 2}-.0484549{col 30}{space 2} .1052659{col 41}{space 1}   -0.46{col 50}{space 3}0.646{col 58}{space 4}-.2555996{col 71}{space 3} .1586898
+{txt}{space 11}laemp {c |}{col 18}{res}{space 2}-.0181034{col 30}{space 2}  .012345{col 41}{space 1}   -1.47{col 50}{space 3}0.144{col 58}{space 4}-.0423962{col 71}{space 3} .0061894
+{txt}{space 10}crmrte {c |}{col 18}{res}{space 2} .1186503{col 30}{space 2}  .127549{col 41}{space 1}    0.93{col 50}{space 3}0.353{col 58}{space 4}-.1323436{col 71}{space 3} .3696443
+{txt}{space 9}lhseval {c |}{col 18}{res}{space 2} .1537338{col 30}{space 2} .0211453{col 41}{space 1}    7.27{col 50}{space 3}0.000{col 58}{space 4} .1121234{col 71}{space 3} .1953441
+{txt}{space 9}compown {c |}{col 18}{res}{space 2} -.034353{col 30}{space 2} .0123686{col 41}{space 1}   -2.78{col 50}{space 3}0.006{col 58}{space 4}-.0586922{col 71}{space 3}-.0100139
+{txt}{space 9}prpncar {c |}{col 18}{res}{space 2}  .094863{col 30}{space 2} .1144019{col 41}{space 1}    0.83{col 50}{space 3}0.408{col 58}{space 4}-.1302599{col 71}{space 3} .3199859
+{txt}{space 10}storec {c |}{col 18}{res}{space 2}  .015167{col 30}{space 2} .0111867{col 41}{space 1}    1.36{col 50}{space 3}0.176{col 58}{space 4}-.0068465{col 71}{space 3} .0371804
+{txt}{space 14}NJ {c |}{col 18}{res}{space 2} .0656731{col 30}{space 2} .0117574{col 41}{space 1}    5.59{col 50}{space 3}0.000{col 58}{space 4} .0425367{col 71}{space 3} .0888096
+{txt}{space 3}prpblckstorec {c |}{col 18}{res}{space 2}-.0907181{col 30}{space 2}  .049195{col 41}{space 1}   -1.84{col 50}{space 3}0.066{col 58}{space 4}-.1875253{col 71}{space 3} .0060891
+{txt}prpblckfranchise {c |}{col 18}{res}{space 2} .0195621{col 30}{space 2} .0437042{col 41}{space 1}    0.45{col 50}{space 3}0.655{col 58}{space 4}-.0664401{col 71}{space 3} .1055643
+{txt}{space 6}prpblckcar {c |}{col 18}{res}{space 2} .0029143{col 30}{space 2} .0772788{col 41}{space 1}    0.04{col 50}{space 3}0.970{col 58}{space 4}-.1491568{col 71}{space 3} .1549853
+{txt}{space 16} {c |}
+{space 11}chain {c |}
+{space 14}2  {c |}{col 18}{res}{space 2}-.0592621{col 30}{space 2} .0171618{col 41}{space 1}   -3.45{col 50}{space 3}0.001{col 58}{space 4}-.0930334{col 71}{space 3}-.0254908
+{txt}{space 14}3  {c |}{col 18}{res}{space 2} .1139022{col 30}{space 2} .0112957{col 41}{space 1}   10.08{col 50}{space 3}0.000{col 58}{space 4} .0916742{col 71}{space 3} .1361302
+{txt}{space 14}4  {c |}{col 18}{res}{space 2}  -.03487{col 30}{space 2}  .012261{col 41}{space 1}   -2.84{col 50}{space 3}0.005{col 58}{space 4}-.0589975{col 71}{space 3}-.0107426
+{txt}{space 16} {c |}
+{space 11}_cons {c |}{col 18}{res}{space 2}-.3797335{col 30}{space 2} .3204186{col 41}{space 1}   -1.19{col 50}{space 3}0.237{col 58}{space 4}-1.010261{col 71}{space 3} .2507939
+{txt}{hline 17}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg lapentree prpblck lincome prppov ldensity lawagest laemp crmrte lhseval compown prpncar storec NJ prpblckstorec prpblckfranchise prpblckcar i.chain, robust
+
+{txt}Linear regression                               Number of obs     = {res}       322
+                                                {txt}F(18, 303)        =  {res}   365.50
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.8826
+                                                {txt}Root MSE          =    {res} .14357
+
+{txt}{hline 17}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 18}{c |}{col 30}    Robust
+{col 1}       lapentree{col 18}{c |}      Coef.{col 30}   Std. Err.{col 42}      t{col 50}   P>|t|{col 58}     [95% Con{col 71}f. Interval]
+{hline 17}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}prpblck {c |}{col 18}{res}{space 2}  .370489{col 30}{space 2} .2017839{col 41}{space 1}    1.84{col 50}{space 3}0.067{col 58}{space 4}-.0265863{col 71}{space 3} .7675643
+{txt}{space 9}lincome {c |}{col 18}{res}{space 2}-.2325035{col 30}{space 2} .0812505{col 41}{space 1}   -2.86{col 50}{space 3}0.005{col 58}{space 4}-.3923903{col 71}{space 3}-.0726167
+{txt}{space 10}prppov {c |}{col 18}{res}{space 2}-1.038191{col 30}{space 2} .5128129{col 41}{space 1}   -2.02{col 50}{space 3}0.044{col 58}{space 4}-2.047316{col 71}{space 3}-.0290652
+{txt}{space 8}ldensity {c |}{col 18}{res}{space 2} .0207587{col 30}{space 2} .0113636{col 41}{space 1}    1.83{col 50}{space 3}0.069{col 58}{space 4}-.0016028{col 71}{space 3} .0431202
+{txt}{space 8}lawagest {c |}{col 18}{res}{space 2} .1817218{col 30}{space 2} .1928396{col 41}{space 1}    0.94{col 50}{space 3}0.347{col 58}{space 4}-.1977526{col 71}{space 3} .5611963
+{txt}{space 11}laemp {c |}{col 18}{res}{space 2}-.0475315{col 30}{space 2} .0324372{col 41}{space 1}   -1.47{col 50}{space 3}0.144{col 58}{space 4}-.1113623{col 71}{space 3} .0162993
+{txt}{space 10}crmrte {c |}{col 18}{res}{space 2} .3192074{col 30}{space 2} .2378481{col 41}{space 1}    1.34{col 50}{space 3}0.181{col 58}{space 4}-.1488358{col 71}{space 3} .7872506
+{txt}{space 9}lhseval {c |}{col 18}{res}{space 2} .1223424{col 30}{space 2} .0491199{col 41}{space 1}    2.49{col 50}{space 3}0.013{col 58}{space 4}  .025683{col 71}{space 3} .2190017
+{txt}{space 9}compown {c |}{col 18}{res}{space 2}-.0151079{col 30}{space 2} .0230589{col 41}{space 1}   -0.66{col 50}{space 3}0.513{col 58}{space 4}-.0604838{col 71}{space 3} .0302681
+{txt}{space 9}prpncar {c |}{col 18}{res}{space 2}-.0909559{col 30}{space 2} .2724966{col 41}{space 1}   -0.33{col 50}{space 3}0.739{col 58}{space 4}-.6271812{col 71}{space 3} .4452694
+{txt}{space 10}storec {c |}{col 18}{res}{space 2} .0692334{col 30}{space 2} .0234837{col 41}{space 1}    2.95{col 50}{space 3}0.003{col 58}{space 4} .0230217{col 71}{space 3} .1154451
+{txt}{space 14}NJ {c |}{col 18}{res}{space 2} .0406563{col 30}{space 2} .0205121{col 41}{space 1}    1.98{col 50}{space 3}0.048{col 58}{space 4} .0002921{col 71}{space 3} .0810205
+{txt}{space 3}prpblckstorec {c |}{col 18}{res}{space 2}-.0917661{col 30}{space 2} .1172171{col 41}{space 1}   -0.78{col 50}{space 3}0.434{col 58}{space 4}-.3224287{col 71}{space 3} .1388965
+{txt}prpblckfranchise {c |}{col 18}{res}{space 2} .1018677{col 30}{space 2} .1142845{col 41}{space 1}    0.89{col 50}{space 3}0.373{col 58}{space 4} -.123024{col 71}{space 3} .3267594
+{txt}{space 6}prpblckcar {c |}{col 18}{res}{space 2}-.2575234{col 30}{space 2} .1865286{col 41}{space 1}   -1.38{col 50}{space 3}0.168{col 58}{space 4}-.6245788{col 71}{space 3} .1095321
+{txt}{space 16} {c |}
+{space 11}chain {c |}
+{space 14}2  {c |}{col 18}{res}{space 2}  .945671{col 30}{space 2} .0256616{col 41}{space 1}   36.85{col 50}{space 3}0.000{col 58}{space 4} .8951734{col 71}{space 3} .9961686
+{txt}{space 14}3  {c |}{col 18}{res}{space 2}  .111536{col 30}{space 2} .0257362{col 41}{space 1}    4.33{col 50}{space 3}0.000{col 58}{space 4} .0608917{col 71}{space 3} .1621804
+{txt}{space 14}4  {c |}{col 18}{res}{space 2} .2708621{col 30}{space 2} .0384855{col 41}{space 1}    7.04{col 50}{space 3}0.000{col 58}{space 4} .1951293{col 71}{space 3} .3465949
+{txt}{space 16} {c |}
+{space 11}_cons {c |}{col 18}{res}{space 2} .6498917{col 30}{space 2} .5702704{col 41}{space 1}    1.14{col 50}{space 3}0.255{col 58}{space 4}-.4723002{col 71}{space 3} 1.772084
+{txt}{hline 17}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. //fin
+. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\Saad\Documents\Economics uni\Second year\QM2\Empirical project\LOGFILE.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}29 Feb 2020, 05:43:07
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
